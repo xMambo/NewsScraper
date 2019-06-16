@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.0.0/flatly/bootstrap.min.css"/>
+      <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-hVpXlpdRmJ+uXGwD5W6HZMnR9ENcKVRn855pPbuI/mwPIEKAuKgTKgGksVGmlAvt" crossorigin="anonymous">
+  
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
     <style>
-      body { background-color: #F2F6D0 }
       #wrapper {
         width: 960px;
         margin-left: auto;
@@ -16,6 +18,7 @@
         overflow: auto;
         width: 60%;
         height: 700px;
+        font-size: 15px;
       }
       #notes {
         float: right;
@@ -24,7 +27,6 @@
       textarea, input {
         display: block;
         width: 100%;
-        background-color: #FCF5C7;
       }
       input {
         height: 36px;
@@ -38,8 +40,16 @@
   </head>
   <body>
     <div id="wrapper">
-      <h1>Note Scraper</h1>
-      <h2><i>If you can do this...the homework should be no problem.</i></h2>
+        <div class="jumbotron">
+            <h1 class="display-3">Sci News!</h1>
+            <p class="lead">Interesting and shocking news trending on the internet...</p>
+            <hr class="my-4">
+            <p>Scraping is fun!</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="http://localhost:3000/scrape" role="button">Scrape!</a>
+            </p>
+          </div>      
+          <h2>Articles</h2>
       <div id="articles"></div>
       <div id="notes"></div>
     </div>

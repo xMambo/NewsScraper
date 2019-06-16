@@ -31,7 +31,7 @@ mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true }
 
 // Routes
 
-// A GET route for scraping the echoJS website
+// A GET route for scraping the website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
   axios.get("https://allthatsinteresting.com/tag/news").then(function(response) {
@@ -44,10 +44,10 @@ app.get("/scrape", function(req, res) {
       var result = {};
 
       // Add the text and href of every link, and save them as properties of the result object
-      result.title = $(this)
-        .children("a")
+      result.title = $(element)
+        .find(".summary")
         .text();
-      result.link = $(this)
+      result.link = $(element)
         .children("a")
         .attr("href");
 
