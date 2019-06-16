@@ -29,6 +29,12 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
 
+
+mongoose.connection.once('open', function(){
+  console.log('Database connection has been made');
+}).on('error', function(error){
+  console.log('Database error:', error);
+});
 // Routes
 
 // A GET route for scraping the website
