@@ -42,6 +42,7 @@ app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
   axios.get("https://allthatsinteresting.com/tag/news").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
+
     var $ = cheerio.load(response.data);
 
     // Now, we grab every h2 within an article tag, and do the following:
@@ -57,7 +58,7 @@ app.get("/scrape", function(req, res) {
         .children("a")
         .attr("href");
       result.img = $(element)
-          .find(".img")
+          .find("img")
           .attr("src");
 
       // Create a new Article using the `result` object built from scraping
