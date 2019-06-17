@@ -1,0 +1,61 @@
+Arguments: 
+  /Users/kevinmiller/.nvm/versions/node/v10.15.3/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js start
+
+PATH: 
+  /Users/kevinmiller/.nvm/versions/node/v10.15.3/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/kevinmiller/.nvm/versions/node/v10.15.3/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  10.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/kevinmiller/VBC/homework/NewsScraper/package.json: Unexpected token } in JSON at position 152
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "newsscraper",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "engine": {
+      "node": "v10.15.3",
+      "npm": "6.4.1",
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/xMambo/NewsScraper.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/xMambo/NewsScraper/issues"
+    },
+    "homepage": "https://github.com/xMambo/NewsScraper#readme",
+    "dependencies": {
+      "axios": "^0.19.0",
+      "cheerio": "^1.0.0-rc.3",
+      "express": "^4.17.1",
+      "express-handlebars": "^3.1.0",
+      "mongoose": "^5.5.12",
+      "morgan": "^1.9.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -26,8 +26,10 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
-// Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/mongoHeadlines", { useNewUrlParser: true });
+
+// Connect to the database before starting the application server.
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/mongoHeadlines';
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 
 mongoose.connection.once('open', function(){
@@ -35,6 +37,7 @@ mongoose.connection.once('open', function(){
 }).on('error', function(error){
   console.log('Database error:', error);
 });
+
 // Routes
 
 // A GET route for scraping the website
